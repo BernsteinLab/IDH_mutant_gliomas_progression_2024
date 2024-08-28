@@ -1,0 +1,5 @@
+# 1.generate the count file
+count_ATAC_over_large_genome_bin.R
+
+# 2. call the CNV value based on malignant and normal cell values
+call_CNV_value.R

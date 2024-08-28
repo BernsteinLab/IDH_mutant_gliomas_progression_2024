@@ -1,0 +1,15 @@
+
+# 1.prepare files for inferCNV
+input all cell gene activity score and identify the malignat population to provide to inferCNV
+
+# 2.Run infer CNV pipeline on Terra
+Input_Matrix.txt: "gs://fc-61e849a4-a49f-470d-9ebc-3eecd9608f06/Jingyi/MGH240_atac_gene_activity.txt"
+GRCh38-2020-A_gen_pos.txt: "gs://fc-61e849a4-a49f-470d-9ebc-3eecd9608f06/GRCh38-2020-A_gen_pos.txt"
+Annotation_File.txt: "gs://fc-61e849a4-a49f-470d-9ebc-3eecd9608f06/Jingyi/BWH14_atac_anno.txt"
+Other parameters:"--denoise --HMM --cluster_by_groups --ref_group_names c6,c7,c9,c11,c12,c13,c14 --cutoff 0.1"
+
+# --ref_group_names varies depending on each sample
+
+# results folder
+./Revision/QC/240228_atac_inferCNV
+
